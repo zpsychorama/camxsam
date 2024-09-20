@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1626932751331-d24b40ce9c55?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    color: #00BFFF; /* Color azul claro */
+    margin-top: 20px;
+    z-index: 1;
+    animation: glow 1s infinite alternate; /* Efecto de alumbrar y desalumbrar */
+}
+
+h1 {
+    font-size: 24px;
+    color: #81cfbe;
+    margin-top: 20px;
+}
+
+.flower-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flower {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    position: relative;
+}
+
+.petal {
+    width: 45px;
+    height: 90px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 100%;
+}
+
+.p1 { transform: translate(-50%, -50%) rotate(0deg); }
+.p2 { transform: translate(-50%, -50%) rotate(36deg); }
+.p3 { transform: translate(-50%, -50%) rotate(72deg); }
+.p4 { transform: translate(-50%, -50%) rotate(108deg); }
+.p5 { transform: translate(-50%, -50%) rotate(144deg); }
+.p6 { transform: translate(-50%, -50%) rotate(180deg); }
+.p7 { transform: translate(-50%, -50%) rotate(216deg); }
+.p8 { transform: translate(-50%, -50%) rotate(252deg); }
+.p9 { transform: translate(-50%, -50%) rotate(288deg); }
+.p10 { transform: translate(-50%, -50%) rotate(324deg); }
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00BFFF, 0 0 10px #00BFFF, 0 0 15px #00BFFF;
+        opacity: 0.5;
+    }
+    100% {
+        text-shadow: 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInPetal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOutPetal {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.petal {
+    animation: fadeInPetal 0.5s ease-in-out both;
+}
